@@ -16,7 +16,7 @@
 
         aws configure
 
-2. Now, from the current directory run the following command to create a security group.
+2. Now, from the current directory run the following command to create and delete ECS.
 
         python3  create_ecs.py
         python3 delelte.py
