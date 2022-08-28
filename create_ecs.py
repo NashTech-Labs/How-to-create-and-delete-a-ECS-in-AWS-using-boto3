@@ -2,11 +2,11 @@
 
 import boto3
 import json
-AWS_REGION = input("Enter the AWS_REGION Name")
-CLUSTER_NAME = input("Enter the AWS_REGION Name")
+REGION = input("Enter the REGION Name: ")
+CLUSTER_NAME = input("Enter the Cluster Name:  ")
 
-client = boto3.client("ecs", region_name=AWS_REGION)
+ECS_client = boto3.client("ecs", region_name=REGION)
 
-response = client.create_cluster(clusterName=CLUSTER_NAME)
+res = ECS_client.create_cluster(clusterName=CLUSTER_NAME)
 
-print(json.dumps(response, indent=4))
+print(json.dumps(res, indent=4))

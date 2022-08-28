@@ -3,10 +3,10 @@
 import boto3
 import json
 
-AWS_REGION = input("Enter the AWS_REGION Name")
-CLUSTER_NAME = input("Enter the AWS_REGION Name")
+REGION = input("Enter the AWS REGION Name:  ")
+CLUSTER_NAME = input("Enter the Cluster Name:  ")
 
-client = boto3.client("ecs", region_name=AWS_REGION)
-response = client.delete_cluster(cluster=CLUSTER_NAME)
+ECS_client = boto3.client("ecs", region_name=REGION)
+response = ECS_client.delete_cluster(cluster=CLUSTER_NAME)
 
 print(json.dumps(response, indent=4))
